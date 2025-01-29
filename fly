@@ -12,7 +12,7 @@ local mini = Instance.new("TextButton")
 local mini2 = Instance.new("TextButton")
 
 main.Name = "main"
-main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+main.Parent = game.Players.LocalPlayer:WaitForChild("صنع روبيرتو")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 
@@ -56,7 +56,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 100, 0, 28)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "BY VOIID"
+TextLabel.Text = "ROBERTO"
 TextLabel.TextColor3 = Color3.fromRGB(160, 32, 240)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000

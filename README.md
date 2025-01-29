@@ -1,181 +1,518 @@
-local main = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local up = Instance.new("TextButton")
-local down = Instance.new("TextButton")
-local onof = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local plus = Instance.new("TextButton")
-local speed = Instance.new("TextLabel")
-local mine = Instance.new("TextButton")
-local closebutton = Instance.new("TextButton")
-local mini = Instance.new("TextButton")
-local mini2 = Instance.new("TextButton") 
+local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "script ROBERTO part 2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-main.Name = "main"
-main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-main.ResetOnSpawn = false 
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
 
-Frame.Parent = main
-Frame.BackgroundColor3 = Color3.fromRGB(163, 255, 137)
-Frame.BorderColor3 = Color3.fromRGB(103, 221, 213)
-Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 190, 0, 57) 
 
-up.Name = "up"
-up.Parent = Frame
-up.BackgroundColor3 = Color3.fromRGB(79, 255, 152)
-up.Size = UDim2.new(0, 44, 0, 28)
-up.Font = Enum.Font.SourceSans
-up.Text = "UP"
-up.TextColor3 = Color3.fromRGB(0, 0, 0)
-up.TextSize = 14.000 
+local Tab = Window:MakeTab({
+    Name = "سكربتات هبد بس تفيدكم",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+local player = game.Players.LocalPlayer.Character
+pl = game.Players.LocalPlayer
+t = true
+local fps = setfpscap
+local L7N = 120
 
-down.Name = "down"
-down.Parent = Frame
-down.BackgroundColor3 = Color3.fromRGB(215, 255, 121)
-down.Position = UDim2.new(0, 0, 0.491228074, 0)
-down.Size = UDim2.new(0, 44, 0, 28)
-down.Font = Enum.Font.SourceSans
-down.Text = "DOWN"
-down.TextColor3 = Color3.fromRGB(0, 0, 0)
-down.TextSize = 14.000 
+local Ha = Health 
+local kmodh = 0
 
-onof.Name = "onof"
-onof.Parent = Frame
-onof.BackgroundColor3 = Color3.fromRGB(255, 249, 74)
-onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
-onof.Size = UDim2.new(0, 56, 0, 28)
-onof.Font = Enum.Font.SourceSans
-onof.Text = " ريبر"
-onof.TextColor3 = Color3.fromRGB(0, 0, 0)
-onof.TextSize = 14.000 
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(242, 60, 255)
-TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 100, 0, 28)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Fly GUI V3"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true 
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
 
-plus.Name = "plus"
-plus.Parent = Frame
-plus.BackgroundColor3 = Color3.fromRGB(133, 145, 255)
-plus.Position = UDim2.new(0.231578946, 0, 0, 0)
-plus.Size = UDim2.new(0, 45, 0, 28)
-plus.Font = Enum.Font.SourceSans
-plus.Text = "+"
-plus.TextColor3 = Color3.fromRGB(0, 0, 0)
-plus.TextScaled = true
-plus.TextSize = 14.000
-plus.TextWrapped = true 
+local Section = Tab:AddSection({
+    Name =  " كسمك باسل يامهزله هاذا سكربت لعيون امىك يزنوىءه اسم حساب باسل بروب M_K162 "
+})
 
-speed.Name = "speed"
-speed.Parent = Frame
-speed.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
-speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
-speed.Size = UDim2.new(0, 44, 0, 28)
-speed.Font = Enum.Font.SourceSans
-speed.Text = "1"
-speed.TextColor3 = Color3.fromRGB(0, 0, 0)
-speed.TextScaled = true
-speed.TextSize = 14.000
-speed.TextWrapped = true 
+--[[
+Name = <string> - The name of the section.
+]]
 
-mine.Name = "mine"
-mine.Parent = Frame
-mine.BackgroundColor3 = Color3.fromRGB(123, 255, 247)
-mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
-mine.Size = UDim2.new(0, 45, 0, 29)
-mine.Font = Enum.Font.SourceSans
-mine.Text = "-"
-mine.TextColor3 = Color3.fromRGB(0, 0, 0)
-mine.TextScaled = true
-mine.TextSize = 14.000
-mine.TextWrapped = true 
+OrionLib:MakeNotification({
+    Name = "اهلا بكم بسكربت لحن بارت 2",
+    Content = "Notification content... what will it say??",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
 
-closebutton.Name = "Close"
-closebutton.Parent = main.Frame
-closebutton.BackgroundColor3 = Color3.fromRGB(225, 25, 0)
-closebutton.Font = "SourceSans"
-closebutton.Size = UDim2.new(0, 45, 0, 28)
-closebutton.Text = "X"
-closebutton.TextSize = 30
-closebutton.Position = UDim2.new(0, 0, -1, 27) 
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
 
-mini.Name = "minimize"
-mini.Parent = main.Frame
-mini.BackgroundColor3 = Color3.fromRGB(192, 150, 230)
-mini.Font = "SourceSans"
-mini.Size = UDim2.new(0, 45, 0, 28)
-mini.Text = "-"
-mini.TextSize = 40
-mini.Position = UDim2.new(0, 44, -1, 27) 
+Tab:AddButton({
+    Name = "تعديل FPS اول ما تضغظ عليه يصير فريماتك 120",
+    Callback = function()
+             fps(L7N)
+      end    
+})
 
-mini2.Name = "minimize2"
-mini2.Parent = main.Frame
-mini2.BackgroundColor3 = Color3.fromRGB(192, 150, 230)
-mini2.Font = "SourceSans"
-mini2.Size = UDim2.new(0, 45, 0, 28)
-mini2.Text = "+"
-mini2.TextSize = 40
-mini2.Position = UDim2.new(0, 44, -1, 57)
-mini2.Visible = false 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The functi
+]]
 
-speeds = 1 
+Tab:AddButton({
+	Name = "سكربت طيران ",
+	Callback = function()
+        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+  	end    
+})
 
-local speaker = game:GetService("Players").LocalPlayer 
+Tab:AddButton({
+	Name = "سكربت طيران العادي 2",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/TinK2zh7"))()
+  	end    
+})
 
-local chr = game.Players.LocalPlayer.Character
-local hum = chr and chr:FindFirstChildWhichIsA("Humanoid") 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
-nowe = false 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-Title = "Fly GUI V3";
-Text = "By me_ozone and Quandale The Dinglish XII#3550";
-Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-Duration = 5; 
+Tab:AddButton({
+	Name = "قتل نفسك ",
+	Callback = function()
+        player.Humanoid.Health = kmodh
+  	end    
+})
+Tab:AddSlider({
+    Name = "تحكم في سرعة لاعب",
+    Min = 1,
+    Max = 850,
+    Default = 85,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "bananas",
+    Callback = function(speed)
+        player.Humanoid.WalkSpeed = (speed)
+    end    
+})
 
-Frame.Active = true -- main = gui
-Frame.Draggable = true 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
-onof.MouseButton1Down:connect(function() 
+Tab:AddButton({
+	Name = "سكربت R6",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+  	end    
+})
 
-if nowe == true then
-nowe = false 
-
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
-speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
-speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
-else 
-nowe = true
+Tab:AddButton({
+	Name = "سكربت ESP",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubEsp"))()
+  	end    
+})
 
 
 
-for i = 1, speeds do
-spawn(function() 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
-local hb = game:GetService("RunService").Heartbeat
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت rtx",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/CHT5hzTB"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت قوست مب الاصلي!",
+	Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/2jbkJhRD'))(
+        )
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
 
-tpwalking = true
-local chr = game.Players.LocalPlayer.Character
-local hum = chr and chr:FindF
+Tab:AddButton({
+	Name = "سكربت قوست الاصلي",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "سكربت تحكم بنفسك وفيه اشياء",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/cUP5CjK5", true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربتي القديم!",
+	Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/aLnerzDU'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+Tab:AddButton({
+	Name = " سكربت سبراني مفتاح سكربت sabraniun",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/emb5/Dance/main/Hub"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "سكربتات AFK",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+
+Tab:AddButton({
+	Name = "سكربت صمله 1!",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت صمله 2!",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت صمله 3",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArgetnarYT/scripts/main/AntiAfk2.lua"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت صمله 4!",
+	Callback = function()
+        wait(0.5)local ba=Instance.new("ScreenGui")
+        local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+        local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+        ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+        ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+        ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+        ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+        ca.TextSize=22;da.Parent=ca
+        da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+        da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+        _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+        _b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by no one "
+        _b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+        ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+        ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+        ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+        game:service'Players'.LocalPlayer.Idled:connect(function()
+        bb:CaptureController()bb:ClickButton2(Vector2.new())
+        ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت صمله 5!",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__", true))()
+  	end    
+})
+
+		--[[
+		Name = <string> - The name of the button.
+		Callback = <function> - The function of the button.
+		]]
+
+
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت صمله 6",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/SZkHcmKR"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+local Tab = Window:MakeTab({
+	Name = "سكربتات ادمن لعيون كسم باسل",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+
+local Section = Tab:AddSection({
+	Name = "والله لاكون كابوسك يباسل لقبه حمني اسمه بروب M_K162"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "سكربت انفنتي!",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+Tab:AddButton({
+	Name = "سكربت ادمن NA",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت ادمن LOGS نقطه بلشات زي .FLY",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+Tab:AddButton({
+	Name = "سكربت نادر يلي عليه فيس ضحكه!",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت تقريبا يعني كلشي موجود فيه",
+	Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Sky-Hub-10706"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت تحكم في لاعبك",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/swordgame/main/anya.lua'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+local Tab = Window:MakeTab({
+	Name = "سكربتات بروكن هافن",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "سكربت بروكن هافن فيه هيلديس ورجل وكلشي تبيه 1",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت ريدز مميزات كثيره تفعل بسفينه واي شي تبيه",
+	Callback = function()
+      		
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "سكربت رقصات!",
+	Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "الوصف كلام مهم",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "طيب يشباب ذا سكربت صنعته عشان باسل اوريكم كيف بهينه بس فقط لا اكثر وا الحين بعلن اعتزالي بعد الغدرات يلي جتني بس يلا عوافي ومتاكد يباسل انك بتشوف كلامي بس والله ثم والله ماتعدي مني دامك طحت على يدي اسمك بروب M_K162 وبس والله اعلن اعتزالي وبتوفيق للجميع"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+local Section = Tab:AddSection({
+	Name = "يلا يلشحاد كسمك يجديد باسل زنوه ههه رد على سكربتي لو قدرت"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+local Section = Tab:AddSection({
+	Name = "بتوفيق لكم جميعا لو تواجهك مشاكل تعال تيك l73mo"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]

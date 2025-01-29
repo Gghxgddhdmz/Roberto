@@ -11,7 +11,7 @@ local closebutton = Instance.new("TextButton")
 local mini = Instance.new("TextButton")
 local mini2 = Instance.new("TextButton")
 
-main.Name = "main"
+main.Name = "قائمة"
 main.Parent = game.Players.LocalPlayer:WaitForChild("صنع روبيرتو")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false

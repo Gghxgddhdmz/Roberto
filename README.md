@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "IRAq CLANS", HidePremium = false, SaveConfig = true, ConfigFolder = "السكربت من صنع شاتاي و سلندر كلانPS5"})
+local Window = OrionLib:MakeWindow({Name = "IRAq CLANS", HidePremium = false, SaveConfig = true, ConfigFolder = "IRAQ"})
 
 --[[
 Name = <string> - The name of the UI.

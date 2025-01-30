@@ -1,0 +1,359 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "SCRIPT SPIDER ON TOP",
+   Icon = 89329261427843, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "SCRIPT SPIDEER",
+   LoadingSubtitle = "AL3M SPIDER",
+   Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "L3EON WZ"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "Welcome To My Script!",
+   Content = "HELLO MY SCRIPT",
+   Duration = 5,
+   Image = 110139412486838,
+})
+
+local Tab = Window:CreateTab("انواع antiafk ", 89329261427843) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات صمله")
+
+local Button = Tab:CreateButton({
+   Name = "سكربت صمله ",
+   Callback = function()
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="كسسمك يوسكي والله ماتعدي"ca.TextColor3=Color3.new(255,255,0)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0,0,0)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text=" Pyro Vlad ON YT "
+_b.TextColor3=Color3.new(0,204,0)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="لعيون ام وسكي"
+ab.TextColor3=Color3.new(255,0,0)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "صمله 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-Afk-Remastered-Script-or-Diffrent-Cool-UI-2097"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "صمله 3",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-script-18076"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "صمله 4",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/Anti-afk/main/Bl%C3%B8xzScript"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "صمله 5",
+   Callback = function()
+   loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "صمله 6",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "7 سكربت صمله ",
+   Callback = function()
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+   end,
+})
+
+local Tab = Window:CreateTab("سكربتات بروك هافن", 132680152916449) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات ماب البيوت")
+
+local Button = Tab:CreateButton({
+   Name = "Infinite Yield سكربت",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت NA",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت يفيدك",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "R4D سكربت",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Ghost سكربت",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت يفيدك",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت كويس",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrollGuiMaker/f0rtuit0us-hub/refs/heads/main/old"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Sander X NEW UPDATE سكربت",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-x-22769"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "YIN سكربت",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Vex سكربت",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/discord.com/invite/3NN5zTW7h2"))()
+   end,
+})
+
+local Tab = Window:CreateTab("سكربتات بروك تفيدك", 80203996981387) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات ماب بيوت تفيدك")
+
+local Button = Tab:CreateButton({
+   Name = "VR7سكربت تاج",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = " 1 اختفاء",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = " 2 اختفاء",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت فلينق",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت فلينق 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Notify If Someone Leave - Joins جربه اذا تبي",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت يضبط فريماتك",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+_G.Ignore = {}
+_G.Settings = {
+	Players = {
+		["Ignore Me"] = true,
+		["Ignore Others"] = true,
+		["Ignore Tools"] = true
+	},
+	Meshes = {
+		NoMesh = false,
+		NoTexture = false,
+		Destroy = false
+	},
+	Images = {
+		Invisible = true,
+		Destroy = false
+	},
+	Explosions = {
+		Smaller = true,
+		Invisible = false, -- Not for PVP games
+		Destroy = false -- Not for PVP games
+	},
+	Particles = {
+		Invisible = true,
+		Destroy = false
+	},
+	TextLabels = {
+		LowerQuality = true,
+		Invisible = false,
+		Destroy = false
+	},
+	MeshParts = {
+		LowerQuality = true,
+		Invisible = false,
+		NoTexture = false,
+		NoMesh = false,
+		Destroy = false
+	},
+	Other = {
+		["FPS Cap"] = 360, -- true to uncap
+		["No Camera Effects"] = true,
+		["No Clothes"] = true,
+		["Low Water Graphics"] = true,
+		["No Shadows"] = true,
+		["Low Rendering"] = true,
+		["Low Quality Parts"] = true,
+		["Low Quality Models"] = true,
+		["Reset Materials"] = true,
+	}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت طيران",
+   Callback = function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت طيران 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-Gui-Modded-10763"))()
+   end,
+})
+
+local Tab = Window:CreateTab("سكربتات تساعدك", 96509056170213) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات مفيدة")
+
+local Button = Tab:CreateButton({
+   Name = " حماية من باند السبام",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "سكربت يحميك من البانق",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Illusion-Script-12744"))()
+   end,
+})
+
+local Tab = Window:CreateTab("الوصف", 96509056170213) -- Title, Image
+
+local Section = Tab:CreateSection("SCRIPT SPIDER")
+
+local Section = Tab:CreateSection("  سكربتي الجديد لعيون كلان WZ اذا في مشاكل تيك SPIDER3MK  ")

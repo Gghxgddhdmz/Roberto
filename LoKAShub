@@ -201,9 +201,3 @@ local Slider = MainTab:CreateSlider({
 local Tab = Window:CreateTab("الوصف", 96509056170213) -- Title, Image
 
 local Section = Tab:CreateSection("كسمك يهيثم +صنع من قبل سبايدر وروبيرتو")
-
-local Tab = Window:CreateTab("المطورين", 96509056170213) -- Title, Image
-
-local Section = Tab:CreateSection("سبايدر")
-
-local Section = Tab:CreateSection("روبيرتو")

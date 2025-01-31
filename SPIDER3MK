@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "SCRIPT SPIDER ON TOP",
+   Name = "SCRIPT DAMAR ON TOP",
    Icon = 89329261427843, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "SCRIPT SPIDEER",
-   LoadingSubtitle = "AL3M SPIDER",
+   LoadingTitle = "SCRIPT DAMAR",
+   LoadingSubtitle = "DAMAR",
    Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
